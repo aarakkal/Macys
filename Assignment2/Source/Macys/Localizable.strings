@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Macys
+
+  Created by Sachith Rao on 12/02/14.
+  Copyright (c) 2014 TEKSystems. All rights reserved.
+*/
+
+"CREATE_PRODUCT_TITLE" = "Details";
+"SHOW_PRODUCT_TITLE" = "Products List";
+"ALERT_TITLE" = "Macys";
+"CANCEL_TITLE" = "Cancel";
+"PHOTO_ALBUM_TITLE" = "Photo Album";
+"CAMERA_TITLE" = "Camera";
+"PHOTO_VIEW_TITLE" = "Photo View";
+"SELECT_COLOR" = "Select Color";
+"UPDATE_BUTTON_TITLE" = "Update";
+"UPDATE_ALERT_MSG" = "Please provide a valid product name";
+"SHOW_PRODUCT_MSG" = "Product list is empty";
+"PRODUCT_DELETE_MSG" = "Deleted the Product successfully";
+"PRODUCT_DELETE_ERROR_MSG" = "Some error happened, please try later";
+"PRODUCT_UPDATE_ERROR_MSG" = "Some error happened while updating the product";
