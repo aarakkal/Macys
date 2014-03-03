@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="fzs-5X-Agc">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="irt-aQ-hL9">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="fzs-5X-Agc" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNs-Hv-bgm">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vnS-Cy-hac"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHh-hz-ZXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="146"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FQa-ku-LQc"/>
+                        <viewControllerLayoutGuide type="bottom" id="C0U-L1-4jk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="H77-FY-8dz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" placeholder="search or enter web ID" backgroundImage="searchbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRS-b3-gsJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="7hw-mG-U87"/>
+                                </connections>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yg-z9-tJl">
+                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-bZ-zxb">
+                                        <rect key="frame" x="1" y="0.0" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-3n-XO0">
+                                        <rect key="frame" x="9" y="83" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="shop.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wga-zS-48c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSA-kA-6T2">
+                                        <rect key="frame" x="113" y="83" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="registry.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y7H-1V-SaD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQf-CR-tap">
+                                        <rect key="frame" x="216" y="83" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="stores.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hto-Ie-ED0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPT-ag-xYr">
+                                        <rect key="frame" x="9" y="186" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="bag.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rOm-i3-dlG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-OM-UtY">
+                                        <rect key="frame" x="113" y="186" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="offers.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4iz-2l-fF2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-4G-HQD">
+                                        <rect key="frame" x="216" y="186" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="account.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e55-2l-ozv"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salebg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-pq-0Yt">
+                                        <rect key="frame" x="1" y="289" width="320" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salebg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="BQp-Tg-bv1">
+                                        <rect key="frame" x="1" y="385" width="320" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="leading" secondItem="tPT-ag-xYr" secondAttribute="leading" id="0iV-g5-nPx"/>
+                                    <constraint firstItem="BQp-Tg-bv1" firstAttribute="top" secondItem="Km2-pq-0Yt" secondAttribute="bottom" constant="8" symbolic="YES" id="1hl-FG-5jw"/>
+                                    <constraint firstItem="dQg-4G-HQD" firstAttribute="top" secondItem="HQf-CR-tap" secondAttribute="bottom" constant="8" symbolic="YES" id="7FA-sh-srm"/>
+                                    <constraint firstItem="8eX-bZ-zxb" firstAttribute="centerX" secondItem="kH6-OM-UtY" secondAttribute="centerX" id="97k-aF-M8P"/>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="top" secondItem="8eX-bZ-zxb" secondAttribute="bottom" constant="8" symbolic="YES" id="9Gj-gQ-pyS"/>
+                                    <constraint firstItem="HQf-CR-tap" firstAttribute="leading" secondItem="dQg-4G-HQD" secondAttribute="leading" id="9Uv-0e-rWU"/>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="top" secondItem="HQf-CR-tap" secondAttribute="top" id="CT7-Ox-tSz"/>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="leading" secondItem="4Yg-z9-tJl" secondAttribute="leading" constant="9" id="Ih7-ef-Jfz"/>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="top" secondItem="SSA-kA-6T2" secondAttribute="top" id="Jec-To-5GC"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQp-Tg-bv1" secondAttribute="bottom" constant="-13" id="JiJ-Ng-VPX"/>
+                                    <constraint firstItem="HQf-CR-tap" firstAttribute="leading" secondItem="SSA-kA-6T2" secondAttribute="trailing" constant="8" symbolic="YES" id="KHk-0i-OGX"/>
+                                    <constraint firstItem="8eX-bZ-zxb" firstAttribute="leading" secondItem="Km2-pq-0Yt" secondAttribute="leading" id="LP5-iz-tnF"/>
+                                    <constraint firstItem="8eX-bZ-zxb" firstAttribute="centerX" secondItem="SSA-kA-6T2" secondAttribute="centerX" id="YXf-e6-QwO"/>
+                                    <constraint firstItem="tPT-ag-xYr" firstAttribute="top" secondItem="cYm-3n-XO0" secondAttribute="bottom" constant="8" symbolic="YES" id="c3f-OQ-PCn"/>
+                                    <constraint firstAttribute="trailing" secondItem="cYm-3n-XO0" secondAttribute="trailing" constant="216" id="ddr-iX-z9n"/>
+                                    <constraint firstItem="8eX-bZ-zxb" firstAttribute="top" secondItem="4Yg-z9-tJl" secondAttribute="top" id="gRc-Nw-Iob"/>
+                                    <constraint firstItem="kH6-OM-UtY" firstAttribute="top" secondItem="SSA-kA-6T2" secondAttribute="bottom" constant="8" symbolic="YES" id="hbt-lT-BHF"/>
+                                    <constraint firstAttribute="bottom" secondItem="cYm-3n-XO0" secondAttribute="bottom" constant="282" id="laS-VY-G4l"/>
+                                    <constraint firstItem="8eX-bZ-zxb" firstAttribute="leading" secondItem="BQp-Tg-bv1" secondAttribute="leading" id="oC0-fc-oba"/>
+                                    <constraint firstItem="cYm-3n-XO0" firstAttribute="top" secondItem="4Yg-z9-tJl" secondAttribute="top" constant="83" id="rNO-h0-gC8"/>
+                                    <constraint firstItem="SSA-kA-6T2" firstAttribute="leading" secondItem="cYm-3n-XO0" secondAttribute="trailing" constant="9" id="urg-Wi-Kuz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Yg-z9-tJl" firstAttribute="trailing" secondItem="H77-FY-8dz" secondAttribute="trailing" id="GQg-PL-CMV"/>
+                            <constraint firstItem="4Yg-z9-tJl" firstAttribute="leading" secondItem="zRS-b3-gsJ" secondAttribute="leading" id="PnV-9D-RSd"/>
+                            <constraint firstItem="4Yg-z9-tJl" firstAttribute="leading" secondItem="H77-FY-8dz" secondAttribute="leading" id="VfF-Fu-zBv"/>
+                            <constraint firstItem="4Yg-z9-tJl" firstAttribute="top" secondItem="zRS-b3-gsJ" secondAttribute="bottom" id="WVh-aq-zRP"/>
+                            <constraint firstItem="4Yg-z9-tJl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="44" id="ZPw-ct-pRh"/>
+                            <constraint firstItem="H77-FY-8dz" firstAttribute="top" secondItem="FQa-ku-LQc" secondAttribute="bottom" id="kqk-EQ-wKZ"/>
+                            <constraint firstItem="H77-FY-8dz" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mh3-KQ-wZS"/>
+                            <constraint firstAttribute="trailing" secondItem="zRS-b3-gsJ" secondAttribute="trailing" constant="80" id="n05-uB-Rpa"/>
+                            <constraint firstAttribute="bottom" secondItem="4Yg-z9-tJl" secondAttribute="bottom" id="sR9-Eh-eHy"/>
+                            <constraint firstItem="H77-FY-8dz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="x0T-pS-o8Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ujy-cN-DQ7"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageScroll" destination="4Yg-z9-tJl" id="f8v-OP-uwy"/>
+                        <outlet property="searchBar" destination="zRS-b3-gsJ" id="Ld9-HI-shS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="account.png" width="95" height="95"/>
+        <image name="bag.png" width="95" height="95"/>
+        <image name="offers.png" width="95" height="95"/>
+        <image name="registry.png" width="95" height="95"/>
+        <image name="salebg.png" width="320" height="88"/>
+        <image name="salebg2.png" width="320" height="88"/>
+        <image name="salebg3.png" width="320" height="88"/>
+        <image name="searchbg.png" width="320" height="44"/>
+        <image name="shop.png" width="95" height="95"/>
+        <image name="stores.png" width="95" height="95"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
